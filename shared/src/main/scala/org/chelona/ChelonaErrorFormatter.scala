@@ -27,20 +27,18 @@ object ChelonaErrorFormatter {
     showTraces:           Boolean = false,
     showFrameStartOffset: Boolean = true,
     expandTabs:           Int     = -1,
-    traceCutOff:          Int     = 120
-  ) = new ChelonaErrorFormatter()
+    traceCutOff:          Int     = 120) = new ChelonaErrorFormatter()
 }
 
 class ChelonaErrorFormatter(
-    block:                Long    = 0L,
-    showExpected:         Boolean = true,
-    showPosition:         Boolean = true,
-    showLine:             Boolean = true,
-    showTraces:           Boolean = false,
-    showFrameStartOffset: Boolean = true,
-    expandTabs:           Int     = -1,
-    traceCutOff:          Int     = 120
-) extends ErrorFormatter {
+  block:                Long    = 0L,
+  showExpected:         Boolean = true,
+  showPosition:         Boolean = true,
+  showLine:             Boolean = true,
+  showTraces:           Boolean = false,
+  showFrameStartOffset: Boolean = true,
+  expandTabs:           Int     = -1,
+  traceCutOff:          Int     = 120) extends ErrorFormatter {
 
   /**
    * Formats the given [[ParseError]] into the given StringBuilder

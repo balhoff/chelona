@@ -19,9 +19,9 @@ package org.chelona
 import org.parboiled2._
 
 import scala.language.implicitConversions
-import scala.scalajs.js.annotation.JSExport
+import scala.scalajs.js.annotation.{ JSExport, JSExportTopLevel }
 
-@JSExport
+@JSExportTopLevel("TriGParser")
 object TriGParser extends TriGAST {
 
   def apply(input: ParserInput, output: List[RDFReturnType] ⇒ Int, validate: Boolean = false, basePath: String = "http://chelona.org", label: String = "") = {

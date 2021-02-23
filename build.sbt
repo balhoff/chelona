@@ -1,12 +1,10 @@
-import org.scalajs.sbtplugin.ScalaJSPlugin
-import org.scalajs.sbtplugin.ScalaJSPlugin.autoImport._
 import scalariform.formatter.preferences._
 import com.typesafe.sbt.SbtScalariform
 import com.typesafe.sbt.SbtScalariform.ScalariformKeys
 
 val commonSettings = Seq(
   version := "1.3.0",
-  scalaVersion := "2.12.3",
+  scalaVersion := "2.12.13",
   name := "chelona",
   organization := "com.github.jupfu",
   homepage := Some(new URL("http://github.com/JuPfu/chelona")),
@@ -32,7 +30,7 @@ val commonSettings = Seq(
     "-language:_",
     "-target:jvm-1.8"))
 
-val formattingSettings = scalariformSettings ++ Seq(
+val formattingSettings = scalariformSettings(false) ++ Seq(
   ScalariformKeys.preferences := ScalariformKeys.preferences.value
     .setPreference(RewriteArrowSymbols, true)
     .setPreference(AlignParameters, true)
@@ -60,38 +58,38 @@ ScalariformKeys.preferences := ScalariformKeys.preferences.value
   .setPreference(AlignSingleLineCaseStatements, true)
   .setPreference(DoubleIndentClassDeclaration, true)
 
-lazy val chelona = crossProject.in(file("."))
+lazy val chelona = crossProject(JSPlatform, JVMPlatform).in(file("."))
   .settings(
     libraryDependencies ++=
     Seq(
-      "org.parboiled" %%% "parboiled" % "2.1.4",
-      "com.chuusai" %%% "shapeless" % "2.3.2",
-      "org.scalatest" %%% "scalatest" % "3.0.1" % Test
+      "org.parboiled" %%% "parboiled" % "2.2.1",
+      "com.chuusai" %%% "shapeless" % "2.3.3",
+      "org.scalatest" %%% "scalatest" % "3.2.5" % Test
       )
     )
   .jvmSettings(
     libraryDependencies ++=
     Seq(
-      "com.github.scopt" % "scopt_2.12" % "3.6.0"
+      "com.github.scopt" %%  "scopt" % "3.7.1"
     )
   )
   .jsSettings(
+    scalaJSUseMainModuleInitializer := true,
     libraryDependencies ++=
       Seq(
       )
   )
-  .settings(commonSettings: _*)
-  .settings(scalariformSettings: _*)
-  .settings(formattingSettings: _*)
-  .settings(publishingSettings: _*)
+  .settings(commonSettings)
+  .settings(scalariformSettings(false))
+  .settings(formattingSettings)
+  .settings(publishingSettings)
 
 lazy val chelonaJVM = chelona.jvm
 lazy val chelonaJS = chelona.js
 
 lazy val root = project.in(file("."))
-  .enablePlugins(ScalaJSPlugin)
   .aggregate(chelonaJVM, chelonaJS)
-  .settings(commonSettings:_*)
+  .settings(commonSettings)
 
 /*
 scalatex.SbtPlugin.projectSettings
@@ -131,4 +129,3 @@ lazy val publishingSettings = Seq(
           <url>http://github.com/jupfu</url>
         </developer>
       </developers>)
-

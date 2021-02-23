@@ -18,9 +18,9 @@ package org.chelona
 
 import org.parboiled2._
 
-import scala.scalajs.js.annotation.JSExport
+import scala.scalajs.js.annotation.{ JSExport, JSExportTopLevel }
 
-@JSExport
+@JSExportTopLevel("ChelonaParser")
 object ChelonaParser {
 
   def apply(input: ParserInput, output: List[RDFReturnType] ⇒ Int, validate: Boolean = false, basePath: String = "http://chelona.org", label: String = "") = {
@@ -277,8 +277,7 @@ class ChelonaParser(val input: ParserInput, val output: List[RDFReturnType] ⇒ 
             case Some(ASTPNPrefix(token)) ⇒ token
             case None                     ⇒ ""
           }
-        }), "Expected preceding @prefix definition before usage", cursor, input
-      ))) ~
+        }), "Expected preceding @prefix definition before usage", cursor, input))) ~
       push(ns) ~ push(local)) ~> ASTPNameLN
   }
 

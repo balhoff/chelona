@@ -18,9 +18,9 @@ package org.chelona
 
 import org.parboiled2._
 
-import scala.scalajs.js.annotation.JSExport
+import scala.scalajs.js.annotation.{ JSExport, JSExportTopLevel }
 
-@JSExport
+@JSExportTopLevel("NQuadParser")
 object NQuadParser {
 
   def apply(input: ParserInput, output: (Term, Term, Term, Term) ⇒ Int, validate: Boolean = false, basePath: String = "http://chelona.org", label: String = "") = {

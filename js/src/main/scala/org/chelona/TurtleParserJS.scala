@@ -20,13 +20,13 @@ import java.io.{ StringWriter, Writer }
 
 import org.parboiled2.{ ParseError, ParserInput }
 
-import scala.scalajs.js.annotation.JSExport
+import scala.scalajs.js.annotation.{ JSExport, JSExportTopLevel }
 import scala.util.{ Failure, Success }
 
-@JSExport
+@JSExportTopLevel("TurtleParserJS")
 object TurtleParserJS {
 
-  @JSExport("TurtleParserJS.ParseReport")
+  @JSExportTopLevel("TurtleParserJSParseReport")
   object ParseReport { var information: String = "No information available." }
 
   @JSExport

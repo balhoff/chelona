@@ -15,12 +15,11 @@
 */
 package org.chelona
 
-import scala.scalajs.js.JSApp
 import scala.scalajs.js.annotation.JSExportTopLevel
 
-object MainJS extends JSApp {
+object MainJS {
   @JSExportTopLevel("main")
-  def main(): Unit = {
+  def main(args: Array[String]): Unit = {
     val input = """<http://chelona.org/AHM-vocs> <http://purl.org/dc/terms/title> <http://chelona.org/Dataset> .
                   <http://chelona.org/AHM-vocs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://chelona.org/Dataset> .
                   <http://chelona.org/AHM-vocs> <http://www.swi-prolog.org/rdf/library/source> <http://purl.org/collections/nl/am/> .
