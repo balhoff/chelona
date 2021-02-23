@@ -357,8 +357,7 @@ class ChelonaParser(val input: ParserInput, val output: List[RDFReturnType] ⇒ 
             case Some(ASTPNPrefix(token)) ⇒ token
             case None                     ⇒ ""
           }
-        }), "Expected preceding @prefix definition before usage", cursor, input
-      ))) ~
+        }), "Expected preceding @prefix definition before usage", cursor, input))) ~
       push(ns) ~ push(local)) ~> ASTPNameLN
   }
 

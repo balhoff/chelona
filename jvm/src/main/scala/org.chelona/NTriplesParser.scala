@@ -255,8 +255,7 @@ class NTriplesParser(val input: ParserInput, val output: (Term, Term, Term, Term
         "\\u007C" | "\\u007c" | "\\U0000007C" | "\\U0000007c" |
         "\\u007D" | "\\u007d" | "\\U0000007D" | "\\U0000007d") ~ UCHAR(false)).*) ~ push(sb.toString) ~ '>' ~>
       ((iri: String) ⇒ (test(isAbsoluteIRIRef(iri)) | run(ChelonaErrorFormatter().WarningMessage(
-        "relative IRI not allowed", iri, "Use absolute IRI instead", cursor, input
-      ))) ~ push(iri)) ~> ASTIriRef ~ ws
+        "relative IRI not allowed", iri, "Use absolute IRI instead", cursor, input))) ~ push(iri)) ~> ASTIriRef ~ ws
   }
 
   //[9]	STRING_LITERAL_QUOTE	::=	'"' ([^#x22#x5C#xA#xD] | ECHAR | UCHAR)* '"'

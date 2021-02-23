@@ -30,8 +30,7 @@ object GetCmdLineArgs {
     base:     String    = "http://chelona.org",
     fmt:      String    = "n3",
     version:  Boolean   = false,
-    trace:    Boolean   = false
-  )
+    trace:    Boolean   = false)
 
   val argsParser = new OptionParser[Config]("Cheló̱na") {
     head("cheló̱na", "version 1.0")
