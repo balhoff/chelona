@@ -4,7 +4,7 @@ import com.typesafe.sbt.SbtScalariform.ScalariformKeys
 
 val commonSettings = Seq(
   version := "1.3.0",
-  scalaVersion := "2.12.13",
+  crossScalaVersions := Seq("2.12.13", "2.13.4"),
   name := "chelona",
   organization := "com.github.jupfu",
   homepage := Some(new URL("http://github.com/JuPfu/chelona")),
@@ -25,7 +25,6 @@ val commonSettings = Seq(
     "-unchecked",
     "-deprecation",
     "-Xlint",
-    "-Ypartial-unification",
     "-opt:l:method",
     "-language:_",
     "-target:jvm-1.8"))
