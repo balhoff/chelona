@@ -40,7 +40,7 @@ object NTriplesParserJS {
 
     val ms: Double = System.currentTimeMillis
 
-    val label = if (uid) java.util.UUID.randomUUID.toString.filter((c: Char) ⇒ c != '-').mkString("") else ""
+    val label = if (uid) java.util.UUID.randomUUID.toString.filter((c: Char) => c != '-').mkString("") else ""
 
     lazy val input: ParserInput = rdf_input
 
@@ -67,17 +67,17 @@ object NTriplesParserJS {
     val res = parser.ntriplesDoc.run()
 
     res match {
-      case Success(tripleCount) ⇒
+      case Success(tripleCount) =>
         val me: Double = System.currentTimeMillis - ms
         if (!validate) {
           ParseReport.information = "Input file converted in " + (me / 1000.0) + "sec " + tripleCount + " triples (triples per second = " + ((tripleCount * 1000) / me + 0.5).toInt + ")"
         } else {
           ParseReport.information = "Input file composed of " + tripleCount + " statements successfully validated in " + (me / 1000.0) + "sec (statements per second = " + ((tripleCount * 1000) / me + 0.5).toInt + ")"
         }
-      case Failure(e: ParseError) ⇒ {
+      case Failure(e: ParseError) => {
         ParseReport.information = parser.formatError(e)
       }
-      case Failure(e) ⇒ {
+      case Failure(e) => {
         ParseReport.information = " Unexpected error during parsing run: " + e
       }
     }

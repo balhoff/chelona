@@ -63,7 +63,7 @@ object NQuadMain extends App {
   // fetch base definition from command line parser
   val base = cmdLineArgs.get.base
   // if uid had been requested from the command line, build unique random label
-  val label = if (cmdLineArgs.get.uid) java.util.UUID.randomUUID.toString.filter((c: Char) ⇒ c != '-').mkString("") else ""
+  val label = if (cmdLineArgs.get.uid) java.util.UUID.randomUUID.toString.filter((c: Char) => c != '-').mkString("") else ""
 
   // pass on some more detailed information from parboiled in case of error
   val trace = cmdLineArgs.get.trace

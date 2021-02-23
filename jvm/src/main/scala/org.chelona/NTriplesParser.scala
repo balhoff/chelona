@@ -24,11 +24,11 @@ import scala.util.{ Failure, Success }
 
 object NTriplesParser {
 
-  def apply(input: ParserInput, output: (Term, Term, Term, Term) ⇒ Int, validate: Boolean = false, basePath: String = "http://chelona.org", label: String = "", verbose: Boolean = true, trace: Boolean = false) = {
+  def apply(input: ParserInput, output: (Term, Term, Term, Term) => Int, validate: Boolean = false, basePath: String = "http://chelona.org", label: String = "", verbose: Boolean = true, trace: Boolean = false) = {
     new NTriplesParser(input, output, validate, basePath, label, verbose, trace)
   }
 
-  def parseAll(filename: String, inputBuffer: BufferedSource, output: (Term, Term, Term, Term) ⇒ Int, validate: Boolean, base: String, label: String, verbose: Boolean, trace: Boolean, n: Int): Unit = {
+  def parseAll(filename: String, inputBuffer: BufferedSource, output: (Term, Term, Term, Term) => Int, validate: Boolean, base: String, label: String, verbose: Boolean, trace: Boolean, n: Int): Unit = {
 
     val ms: Double = System.currentTimeMillis
 
@@ -58,10 +58,10 @@ object NTriplesParser {
       val parser = parserQueue.dequeue()
       val res = parser.ntriplesDoc.run()
       res match {
-        case Success(count) ⇒ tripleCount += count
-        case Failure(e: ParseError) ⇒
+        case Success(count) => tripleCount += count
+        case Failure(e: ParseError) =>
           if (!trace) System.err.println("File '" + filename + "': " + parser.formatError(e, new ChelonaErrorFormatter(block = tripleCount))) else System.err.println("File '" + filename + "': " + parser.formatError(e, new ChelonaErrorFormatter(block = tripleCount, showTraces = true)))
-        case Failure(e) ⇒ System.err.println("File '" + filename + "': Unexpected error during parsing run: " + e)
+        case Failure(e) => System.err.println("File '" + filename + "': Unexpected error during parsing run: " + e)
       }
     }
 
@@ -81,7 +81,7 @@ object NTriplesParser {
   }
 }
 
-class NTriplesParser(val input: ParserInput, val output: (Term, Term, Term, Term) ⇒ Int, validate: Boolean = false, val basePath: String = "http://chelona.org", val label: String = "", val verbose: Boolean = true, val trace: Boolean = false) extends Parser with StringBuilding {
+class NTriplesParser(val input: ParserInput, val output: (Term, Term, Term, Term) => Int, validate: Boolean = false, val basePath: String = "http://chelona.org", val label: String = "", val verbose: Boolean = true, val trace: Boolean = false) extends Parser with StringBuilding {
 
   import org.chelona.CharPredicates._
   import org.parboiled2.CharPredicate.{ Alpha, AlphaNum, HexDigit }
@@ -89,7 +89,7 @@ class NTriplesParser(val input: ParserInput, val output: (Term, Term, Term, Term
 
   import NTripleAST._
 
-  private def hexStringToCharString(s: String) = s.grouped(4).map(cc ⇒ (hexValue(cc(0)) << 12 | hexValue(cc(1)) << 8 | hexValue(cc(2)) << 4 | hexValue(cc(3))).toChar).filter(_ != '\u0000').mkString("")
+  private def hexStringToCharString(s: String) = s.grouped(4).map(cc => (hexValue(cc(0)) << 12 | hexValue(cc(1)) << 8 | hexValue(cc(2)) << 4 | hexValue(cc(3))).toChar).filter(_ != '\u0000').mkString("")
 
   /*
  Parsing of the turtle data is done in the main thread.
@@ -119,7 +119,7 @@ class NTriplesParser(val input: ParserInput, val output: (Term, Term, Term, Term
  predicate object-lists, collections, etc.
  */
 
-  val astQueue = mutable.Queue[(NTripleType ⇒ Int, NTripleType)]()
+  val astQueue = mutable.Queue[(NTripleType => Int, NTripleType)]()
   val worker = new ASTThreadWorker(astQueue)
 
   if (!validate) {
@@ -131,7 +131,7 @@ class NTriplesParser(val input: ParserInput, val output: (Term, Term, Term, Term
   /*
    Enqueue ast for a NTriple statement
    */
-  def asynchronous(ast: (NTripleType ⇒ Int, NTripleType)) = astQueue.synchronized {
+  def asynchronous(ast: (NTripleType => Int, NTripleType)) = astQueue.synchronized {
     astQueue.enqueue(ast)
     if (astQueue.nonEmpty) astQueue.notify()
   }
@@ -149,7 +149,7 @@ class NTriplesParser(val input: ParserInput, val output: (Term, Term, Term, Term
 
   //[1]	ntriplesDoc	::=	triple? (EOL triple)* EOL?
   def ntriplesDoc: Rule1[Long] = rule {
-    (ntriples).*(EOL) ~ EOL.? ~ EOI ~> ((v: Seq[Int]) ⇒ {
+    (ntriples).*(EOL) ~ EOL.? ~ EOI ~> ((v: Seq[Int]) => {
       if (!validate) {
         worker.shutdown()
         worker.join()
@@ -168,14 +168,14 @@ class NTriplesParser(val input: ParserInput, val output: (Term, Term, Term, Term
   }
 
   def ntriples = rule {
-    (triple ~> ((ast: NTripleType) ⇒
+    (triple ~> ((ast: NTripleType) =>
       if (!__inErrorAnalysis) {
         if (!validate) {
           asynchronous((renderStatement, ast)); 1
         } else
           ast match {
-            case ASTComment(s) ⇒ 0
-            case _             ⇒ 1
+            case ASTComment(s) => 0
+            case _             => 1
           }
       } else {
         if (!validate) {
@@ -202,9 +202,9 @@ class NTriplesParser(val input: ParserInput, val output: (Term, Term, Term, Term
   def subject = rule {
     run {
       cursorChar match {
-        case '<' ⇒ IRIREF
-        case '_' ⇒ BLANK_NODE_LABEL
-        case _   ⇒ MISMATCH
+        case '<' => IRIREF
+        case '_' => BLANK_NODE_LABEL
+        case _   => MISMATCH
       }
     } ~> ASTSubject
   }
@@ -218,10 +218,10 @@ class NTriplesParser(val input: ParserInput, val output: (Term, Term, Term, Term
   def `object` = rule {
     run {
       cursorChar match {
-        case '<' ⇒ IRIREF
-        case '"' ⇒ literal
-        case '_' ⇒ BLANK_NODE_LABEL
-        case _   ⇒ MISMATCH
+        case '<' => IRIREF
+        case '"' => literal
+        case '_' => BLANK_NODE_LABEL
+        case _   => MISMATCH
       }
     } ~> ASTObject
   }
@@ -254,7 +254,7 @@ class NTriplesParser(val input: ParserInput, val output: (Term, Term, Term, Term
         "\\u007B" | "\\u007b" | "\\U0000007B" | "\\U0000007b" |
         "\\u007C" | "\\u007c" | "\\U0000007C" | "\\U0000007c" |
         "\\u007D" | "\\u007d" | "\\U0000007D" | "\\U0000007d") ~ UCHAR(false)).*) ~ push(sb.toString) ~ '>' ~>
-      ((iri: String) ⇒ (test(isAbsoluteIRIRef(iri)) | run(ChelonaErrorFormatter().WarningMessage(
+      ((iri: String) => (test(isAbsoluteIRIRef(iri)) | run(ChelonaErrorFormatter().WarningMessage(
         "relative IRI not allowed", iri, "Use absolute IRI instead", cursor, input))) ~ push(iri)) ~> ASTIriRef ~ ws
   }
 

@@ -1870,12 +1870,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-LITERAL2_with_langtag_and_datatype.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-LITERAL2_with_langtag_and_datatype.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3243,12 +3243,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-uri-01.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-uri-01.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3266,12 +3266,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-uri-02.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-uri-02.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3289,12 +3289,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-uri-03.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-uri-03.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3312,12 +3312,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-uri-04.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-uri-04.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3335,12 +3335,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-uri-05.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-uri-05.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3358,12 +3358,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-prefix-01.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-prefix-01.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3381,12 +3381,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-prefix-02.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-prefix-02.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3404,12 +3404,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-prefix-03.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-prefix-03.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3427,12 +3427,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-prefix-04.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-prefix-04.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3450,12 +3450,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-prefix-05.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-prefix-05.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3473,12 +3473,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-base-01.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-base-01.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3496,12 +3496,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-base-02.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-base-02.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3519,12 +3519,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-base-03.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-base-03.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3542,12 +3542,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-01.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-01.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3565,12 +3565,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-02.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-02.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3588,12 +3588,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-03.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-03.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3611,12 +3611,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-04.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-04.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3634,12 +3634,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-05.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-05.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3657,12 +3657,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-06.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-06.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3680,12 +3680,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-07.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-07.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3703,12 +3703,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-kw-01.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-kw-01.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3726,12 +3726,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-kw-02.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-kw-02.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3749,12 +3749,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-kw-03.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-kw-03.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3772,12 +3772,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-kw-04.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-kw-04.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3795,12 +3795,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-kw-05.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-kw-05.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3818,12 +3818,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-n3-extras-01.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-n3-extras-01.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3841,12 +3841,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-n3-extras-02.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-n3-extras-02.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3864,12 +3864,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-n3-extras-03.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-n3-extras-03.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3887,12 +3887,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-n3-extras-04.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-n3-extras-04.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3910,12 +3910,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-n3-extras-05.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-n3-extras-05.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3933,12 +3933,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-n3-extras-06.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-n3-extras-06.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3956,12 +3956,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-n3-extras-07.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-n3-extras-07.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -3979,12 +3979,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-n3-extras-08.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-n3-extras-08.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4002,12 +4002,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-n3-extras-09.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-n3-extras-09.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4025,12 +4025,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-n3-extras-10.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-n3-extras-10.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4048,12 +4048,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-n3-extras-11.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-n3-extras-11.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4071,12 +4071,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-n3-extras-12.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-n3-extras-12.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4094,12 +4094,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-n3-extras-13.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-n3-extras-13.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4117,12 +4117,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-08.ttl': " + e /*parser.formatError(e)*/ )
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-08.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4140,12 +4140,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-09.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-09.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4163,12 +4163,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-10.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-10.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4186,12 +4186,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-11.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-11.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4209,12 +4209,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-12.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-12.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4232,12 +4232,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-13.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-13.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4255,12 +4255,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-14.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-14.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4278,12 +4278,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-15.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-15.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4301,12 +4301,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-16.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-16.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4324,12 +4324,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-17.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-struct-17.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4347,12 +4347,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-lang-01.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-lang-01.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4370,12 +4370,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-esc-01.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-esc-01.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4393,12 +4393,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-esc-02.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-esc-02.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4416,12 +4416,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-esc-03.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-esc-03.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4439,12 +4439,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-esc-04.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-esc-04.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4462,12 +4462,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-pname-01.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-pname-01.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4485,12 +4485,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-pname-02.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-pname-02.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4508,12 +4508,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-pname-03.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-pname-03.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4531,12 +4531,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-string-01.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-string-01.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4554,12 +4554,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-string-02.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-string-02.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4577,12 +4577,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-string-03.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-string-03.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4600,12 +4600,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-string-04.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-string-04.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4623,12 +4623,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-string-05.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-string-05.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4646,12 +4646,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-string-06.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-string-06.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4669,12 +4669,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-string-07.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-string-07.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4692,12 +4692,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-num-01.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-num-01.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4715,12 +4715,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-num-02.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-num-02.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4738,12 +4738,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-num-03.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-num-03.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4761,12 +4761,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-num-04.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-num-04.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -4784,12 +4784,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-num-05.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-num-05.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -5329,12 +5329,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-eval-bad-01.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-eval-bad-01.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -5352,12 +5352,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-eval-bad-02.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-eval-bad-02.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -5375,12 +5375,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-eval-bad-03.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-eval-bad-03.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -5398,12 +5398,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-eval-bad-04.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-eval-bad-04.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -5421,12 +5421,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-blank-label-dot-end.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-blank-label-dot-end.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -5444,12 +5444,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-ln-dash-start.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-ln-dash-start.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -5467,12 +5467,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-ln-escape-start.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-ln-escape-start.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -5490,12 +5490,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-ln-escape.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-ln-escape.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -5513,12 +5513,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-missing-ns-dot-end.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-missing-ns-dot-end.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -5536,12 +5536,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-missing-ns-dot-start.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-missing-ns-dot-start.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -5559,12 +5559,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-ns-dot-end.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-ns-dot-end.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -5582,12 +5582,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-ns-dot-start.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-ns-dot-start.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -5605,12 +5605,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-number-dot-in-anon.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-bad-number-dot-in-anon.ttl': Unexpected error during parsing run: " + e)
         false
     }
@@ -5628,12 +5628,12 @@ class ChelonaEARLSpec extends AnyFlatSpec with RDFTurtleOutput {
     val parser = ChelonaParser(input, writer, false, "http://www.w3.org/2013/TurtleTests", "")
 
     val res = parser.turtleDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './TurtleTests/turtle-syntax-blank-label.ttl': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './TurtleTests/turtle-syntax-blank-label.ttl': Unexpected error during parsing run: " + e)
         false
     }

@@ -53,12 +53,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-struct-01.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-struct-01.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -78,12 +78,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-base-01.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-base-01.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -123,12 +123,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nq-syntax-bad-uri-01.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nq-syntax-bad-uri-01.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -148,12 +148,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-string-02.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-string-02.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -213,12 +213,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-prefix-01.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-prefix-01.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -298,12 +298,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nq-syntax-bad-quint-01.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nq-syntax-bad-quint-01.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -323,12 +323,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-struct-02.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-struct-02.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -428,12 +428,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nq-syntax-bad-literal-01.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nq-syntax-bad-literal-01.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -453,12 +453,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-uri-03.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-uri-03.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -478,12 +478,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-uri-07.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-uri-07.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -523,12 +523,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-string-03.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-string-03.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -548,12 +548,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-uri-04.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-uri-04.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -733,12 +733,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-string-04.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-string-04.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -778,12 +778,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-lang-01.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-lang-01.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -823,12 +823,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-esc-01.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-esc-01.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -868,12 +868,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-num-01.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-num-01.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -913,12 +913,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-string-06.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-string-06.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -958,12 +958,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-uri-09.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-uri-09.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -1003,12 +1003,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-string-05.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-string-05.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -1028,12 +1028,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-uri-02.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-uri-02.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -1053,12 +1053,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-uri-06.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-uri-06.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -1078,12 +1078,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-esc-02.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-esc-02.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -1183,12 +1183,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nq-syntax-bad-literal-03.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nq-syntax-bad-literal-03.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -1228,12 +1228,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-num-03.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-num-03.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -1313,12 +1313,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nq-syntax-bad-literal-02.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nq-syntax-bad-literal-02.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -1358,12 +1358,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-num-02.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-num-02.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -1403,12 +1403,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-string-07.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-string-07.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -1528,12 +1528,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-esc-03.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-esc-03.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -1633,12 +1633,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-uri-01.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-uri-01.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -1658,12 +1658,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-uri-05.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-uri-05.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -1743,12 +1743,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-string-01.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-string-01.nq': Unexpected error during parsing run: " + e)
         false
     }
@@ -1828,12 +1828,12 @@ class NQuadEARLSpec extends AnyFlatSpec with RDFQuadOutput {
     val parser = NQuadParser(input, writer, false, "http://www.w3.org/2013/NQuadTests", "")
 
     val res = parser.nquadsDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-uri-08.nq': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NQuadTests/nt-syntax-bad-uri-08.nq': Unexpected error during parsing run: " + e)
         false
     }
