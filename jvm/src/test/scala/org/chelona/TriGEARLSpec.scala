@@ -70,12 +70,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-kw-04.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-kw-04.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -166,12 +166,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-missing-ns-dot-end.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-missing-ns-dot-end.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -261,12 +261,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-eval-bad-01.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-eval-bad-01.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -320,12 +320,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-esc-01.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-esc-01.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -361,12 +361,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-prefix-02.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-prefix-02.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -438,12 +438,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-eval-bad-04.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-eval-bad-04.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -461,12 +461,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-struct-06.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-struct-06.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -502,12 +502,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-struct-14.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-struct-14.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -525,12 +525,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-n3-extras-04.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-n3-extras-04.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -602,12 +602,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-n3-extras-12.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-n3-extras-12.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -625,12 +625,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-n3-extras-05.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-n3-extras-05.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -648,12 +648,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-struct-15.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-struct-15.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -743,12 +743,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-graph-bad-03.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-graph-bad-03.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -856,12 +856,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-ns-dot-start.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-ns-dot-start.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -879,12 +879,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-graph-bad-10.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-graph-bad-10.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -1100,12 +1100,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-ln-escape.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-ln-escape.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -1141,12 +1141,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-base-04.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-base-04.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -1182,12 +1182,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-string-02.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-string-02.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -1259,12 +1259,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-string-03.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-string-03.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -1300,12 +1300,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-n3-extras-02.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-n3-extras-02.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -1359,12 +1359,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-collection-graph-bad-01.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-collection-graph-bad-01.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -1400,12 +1400,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-esc-03.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-esc-03.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -1441,12 +1441,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-struct-07.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-struct-07.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -1518,12 +1518,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-ln-dash-start.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-ln-dash-start.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -1541,12 +1541,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-struct-04.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-struct-04.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -1582,12 +1582,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-num-05.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-num-05.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -1605,12 +1605,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-LITERAL2_with_langtag_and_datatype.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-LITERAL2_with_langtag_and_datatype.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -1628,12 +1628,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-graph-bad-02.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-graph-bad-02.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -1651,12 +1651,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-struct-16.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-struct-16.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -1692,12 +1692,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-missing-ns-dot-start.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-missing-ns-dot-start.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -1751,12 +1751,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-graph-bad-11.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-graph-bad-11.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -1864,12 +1864,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-base-05.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-base-05.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -1905,12 +1905,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-pname-01.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-pname-01.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -1928,12 +1928,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-n3-extras-07.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-n3-extras-07.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -1951,12 +1951,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-prefix-03.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-prefix-03.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -2082,12 +2082,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-number-dot-in-anon.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-number-dot-in-anon.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -2105,12 +2105,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-string-07.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-string-07.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -2128,12 +2128,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-kw-05.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-kw-05.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -2169,12 +2169,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-struct-03.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-struct-03.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -2210,12 +2210,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-collection-graph-bad-02.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-collection-graph-bad-02.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -2233,12 +2233,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-turtle-bad-02.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-turtle-bad-02.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -2292,12 +2292,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-num-04.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-num-04.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -2315,12 +2315,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-num-01.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-num-01.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -2338,12 +2338,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-prefix-07.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-prefix-07.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -2487,12 +2487,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-n3-extras-11.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-n3-extras-11.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -2510,12 +2510,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-esc-04.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-esc-04.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -2569,12 +2569,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-lang-01.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-lang-01.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -2628,12 +2628,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-n3-extras-01.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-n3-extras-01.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -2759,12 +2759,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-graph-bad-07.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-graph-bad-07.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -2800,12 +2800,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-list-04.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-list-04.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -2859,12 +2859,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-base-02.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-base-02.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -2918,12 +2918,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-list-03.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-list-03.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -3013,12 +3013,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-list-01.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-list-01.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -3054,12 +3054,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-struct-10.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-struct-10.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -3095,12 +3095,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-num-02.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-num-02.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -3136,12 +3136,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-struct-09.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-struct-09.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -3249,12 +3249,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-eval-bad-03.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-eval-bad-03.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -3290,12 +3290,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-uri-05.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-uri-05.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -3313,12 +3313,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-num-03.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-num-03.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -3480,12 +3480,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-kw-02.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-kw-02.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -3593,12 +3593,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-uri-02.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-uri-02.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -3688,12 +3688,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-base-01.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-base-01.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -3747,13 +3747,13 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         // due to Parboiled2 formatting error earl output somewhat earlier
         System.err.println("File './TrigTests/trig-graph-bad-06.trig': " + e /*parser.formatError(e)*/ )
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-graph-bad-06.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -3771,12 +3771,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-pname-02.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-pname-02.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -3938,12 +3938,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-base-03.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-base-03.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -4015,12 +4015,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-list-02.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-list-02.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -4038,12 +4038,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-prefix-05.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-prefix-05.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -4097,12 +4097,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-uri-04.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-uri-04.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -4192,12 +4192,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-eval-bad-02.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-eval-bad-02.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -4269,12 +4269,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-turtle-bad-01.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-turtle-bad-01.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -4310,12 +4310,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-struct-02.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-struct-02.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -4441,12 +4441,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-ns-dot-end.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-ns-dot-end.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -4590,12 +4590,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-graph-bad-08.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-graph-bad-08.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -4685,12 +4685,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-n3-extras-06.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-n3-extras-06.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -4744,12 +4744,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-string-01.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-string-01.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -4785,12 +4785,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-n3-extras-13.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-n3-extras-13.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -4826,12 +4826,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-kw-03.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-kw-03.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -4867,12 +4867,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-prefix-06.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-prefix-06.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -4962,12 +4962,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-n3-extras-03.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-n3-extras-03.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -5021,12 +5021,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-n3-extras-09.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-n3-extras-09.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -5062,12 +5062,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-n3-extras-08.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-n3-extras-08.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -5103,12 +5103,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-uri-03.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-uri-03.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -5144,12 +5144,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-struct-05.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-struct-05.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -5203,12 +5203,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-struct-12.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-struct-12.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -5262,12 +5262,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-esc-02.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-esc-02.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -5321,12 +5321,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-string-06.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-string-06.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -5344,12 +5344,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-bnodeplist-graph-bad-01.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-bnodeplist-graph-bad-01.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -5439,12 +5439,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-ln-escape-start.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-ln-escape-start.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -5480,12 +5480,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-graph-bad-04.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-graph-bad-04.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -5575,12 +5575,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-graph-bad-05.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-graph-bad-05.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -5634,12 +5634,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-pname-03.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-pname-03.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -5657,12 +5657,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-uri-01.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-uri-01.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -5698,12 +5698,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-blank-label-dot-end.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-blank-label-dot-end.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -5811,12 +5811,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-n3-extras-10.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-n3-extras-10.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -5852,12 +5852,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-string-05.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-string-05.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -5875,12 +5875,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-string-04.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-string-04.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -6060,12 +6060,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-prefix-04.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-prefix-04.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -6137,12 +6137,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-prefix-01.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-prefix-01.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -6304,12 +6304,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-graph-bad-09.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-graph-bad-09.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -6381,12 +6381,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-struct-13.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-struct-13.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -6440,12 +6440,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-graph-bad-01.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-graph-bad-01.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -6481,12 +6481,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-kw-01.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-kw-01.trig': Unexpected error during parsing run: " + e)
         false
     }
@@ -6522,12 +6522,12 @@ class TriGEARLSpec extends AnyFlatSpec with RDFTriGOutput {
     val parser = TriGParser(input, writer, false, "http://www.w3.org/2013/TrigTests", "")
 
     val res = parser.trigDoc.run() match {
-      case scala.util.Success(tripleCount) =>
+      case scala.util.Success(tripleCount) ⇒
         true
-      case Failure(e: ParseError) =>
+      case Failure(e: ParseError) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-struct-17.trig': " + parser.formatError(e))
         false
-      case Failure(e) =>
+      case Failure(e) ⇒
         System.err.println("File './TrigTests/trig-syntax-bad-struct-17.trig': Unexpected error during parsing run: " + e)
         false
     }

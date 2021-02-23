@@ -18,12 +18,12 @@ package org.chelona
 
 import scala.collection.mutable
 
-final class ASTThreadWorker[T](astQueue: mutable.Queue[(T => Int, T)]) extends Thread {
+final class ASTThreadWorker[T](astQueue: mutable.Queue[(T ⇒ Int, T)]) extends Thread {
 
   @volatile var terminated = false
   var sum = 0L
 
-  final def poll(): Option[(T => Int, T)] = astQueue.synchronized {
+  final def poll(): Option[(T ⇒ Int, T)] = astQueue.synchronized {
     while (astQueue.isEmpty && !terminated) astQueue.wait(10)
     if (!terminated) Some(astQueue.dequeue()) else None
   }
@@ -31,9 +31,9 @@ final class ASTThreadWorker[T](astQueue: mutable.Queue[(T => Int, T)]) extends T
   import scala.annotation.tailrec
 
   @tailrec final override def run() = poll() match {
-    case Some((renderStatement, ast)) =>
+    case Some((renderStatement, ast)) ⇒
       sum += renderStatement(ast); run()
-    case None =>
+    case None ⇒
   }
 
   final def shutdown() = astQueue.synchronized {

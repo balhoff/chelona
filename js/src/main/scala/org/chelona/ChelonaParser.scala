@@ -23,12 +23,12 @@ import scala.scalajs.js.annotation.{ JSExport, JSExportTopLevel }
 @JSExportTopLevel("ChelonaParser")
 object ChelonaParser {
 
-  def apply(input: ParserInput, output: List[RDFReturnType] => Int, validate: Boolean = false, basePath: String = "http://chelona.org", label: String = "") = {
+  def apply(input: ParserInput, output: List[RDFReturnType] ⇒ Int, validate: Boolean = false, basePath: String = "http://chelona.org", label: String = "") = {
     new ChelonaParser(input, output, validate, basePath, label)
   }
 }
 
-class ChelonaParser(val input: ParserInput, val output: List[RDFReturnType] => Int, validate: Boolean = false, val basePath: String = "http://chelona.org", val label: String = "") extends Parser with StringBuilding {
+class ChelonaParser(val input: ParserInput, val output: List[RDFReturnType] ⇒ Int, validate: Boolean = false, val basePath: String = "http://chelona.org", val label: String = "") extends Parser with StringBuilding {
 
   import org.chelona.CharPredicates._
   import org.parboiled2.CharPredicate.{ Alpha, AlphaNum, Digit, HexDigit }
@@ -36,7 +36,7 @@ class ChelonaParser(val input: ParserInput, val output: List[RDFReturnType] => I
 
   import TurtleAST._
 
-  private def hexStringToCharString(s: String) = s.grouped(4).map(cc => (hexValue(cc(0)) << 12 | hexValue(cc(1)) << 8 | hexValue(cc(2)) << 4 | hexValue(cc(3))).toChar).filter(_ != '\u0000').mkString("")
+  private def hexStringToCharString(s: String) = s.grouped(4).map(cc ⇒ (hexValue(cc(0)) << 12 | hexValue(cc(1)) << 8 | hexValue(cc(2)) << 4 | hexValue(cc(3))).toChar).filter(_ != '\u0000').mkString("")
 
   val prefixMap = scala.collection.mutable.Map.empty[String, String]
 
@@ -51,16 +51,16 @@ class ChelonaParser(val input: ParserInput, val output: List[RDFReturnType] => I
 
   //[1] turtleDoc 	::= 	statement*
   def turtleDoc = rule {
-    anyOf(" \n\r\t").* ~ (statement ~> ((ast: TurtleAST) =>
+    anyOf(" \n\r\t").* ~ (statement ~> ((ast: TurtleAST) ⇒
       if (!__inErrorAnalysis) {
         if (!validate) {
           renderStatement(ast)
         } else
           ast match {
-            case ASTStatement(ASTComment(s)) => 0
-            case _                           => 1
+            case ASTStatement(ASTComment(s)) ⇒ 0
+            case _                           ⇒ 1
           }
-      } else { 0 })).* ~ EOI ~> ((v: Seq[Int]) => {
+      } else { 0 })).* ~ EOI ~> ((v: Seq[Int]) ⇒ {
       v.sum
     })
   }
@@ -82,22 +82,22 @@ class ChelonaParser(val input: ParserInput, val output: List[RDFReturnType] => I
 
   //[4] prefixID 	::= 	'@prefix' PNAME_NS IRIREF '.'
   def prefixID = rule {
-    atomic("@prefix") ~ PNAME_NS ~ ws ~ IRIREF ~> ((p: ASTPNameNS, i: ASTIriRef) => run(definePrefix(p, i)) ~ push(p) ~ push(i)) ~> ASTPrefixID ~ ws ~ "."
+    atomic("@prefix") ~ PNAME_NS ~ ws ~ IRIREF ~> ((p: ASTPNameNS, i: ASTIriRef) ⇒ run(definePrefix(p, i)) ~ push(p) ~ push(i)) ~> ASTPrefixID ~ ws ~ "."
   }
 
   //[5] base 	::= 	'@base' IRIREF '.'
   def base = rule {
-    atomic("@base") ~ IRIREF ~> ((i: ASTIriRef) => run(definePrefix("", i)) ~ push(i)) ~> ASTBase ~ ws ~ "."
+    atomic("@base") ~ IRIREF ~> ((i: ASTIriRef) ⇒ run(definePrefix("", i)) ~ push(i)) ~> ASTBase ~ ws ~ "."
   }
 
   //[5s] sparqlBase 	::= 	"BASE" IRIREF
   def sparqlBase = rule {
-    atomic(ignoreCase("base")) ~ ws ~ IRIREF ~> ((i: ASTIriRef) => run(definePrefix("", i)) ~ push(i)) ~> ASTSparqlBase ~ ws
+    atomic(ignoreCase("base")) ~ ws ~ IRIREF ~> ((i: ASTIriRef) ⇒ run(definePrefix("", i)) ~ push(i)) ~> ASTSparqlBase ~ ws
   }
 
   //[6s] sparqlPrefix 	::= 	"PREFIX" PNAME_NS IRIREF
   def sparqlPrefix = rule {
-    atomic(ignoreCase("prefix")) ~ ws ~ PNAME_NS ~ ws ~ IRIREF ~> ((p: ASTPNameNS, i: ASTIriRef) => run(definePrefix(p, i)) ~ push(p) ~ push(i)) ~> ASTSparqlPrefix ~ ws
+    atomic(ignoreCase("prefix")) ~ ws ~ PNAME_NS ~ ws ~ IRIREF ~> ((p: ASTPNameNS, i: ASTIriRef) ⇒ run(definePrefix(p, i)) ~ push(p) ~ push(i)) ~> ASTSparqlPrefix ~ ws
   }
 
   //[6] triples 	::= 	subject predicateObjectList | blankNodePropertyList predicateObjectList?
@@ -217,18 +217,18 @@ class ChelonaParser(val input: ParserInput, val output: List[RDFReturnType] => I
 
   //[24] STRING_LITERAL_LONG_SINGLE_QUOTE       ::=     "'''" (("'" | "''")? ([^'\] | ECHAR | UCHAR))* "'''"
   def STRING_LITERAL_LONG_SINGLE_QUOTE = rule {
-    str("'''") ~ clearSB ~ (capture(('\'' ~ '\'' ~ !'\'' | '\'' ~ !('\'' ~ '\'')).?) ~> ((s: String) => appendSB(s.replaceAllLiterally("\"", "\\\""))) ~ (capture(noneOf("\'\\\"")) ~> ((s: String) => run(maskEsc(s))) | '"' ~ appendSB("\\\"") | UCHAR(true) | ECHAR)).* ~ str("'''") ~ push(sb.toString) ~> ASTStringLiteralLongSingleQuote
+    str("'''") ~ clearSB ~ (capture(('\'' ~ '\'' ~ !'\'' | '\'' ~ !('\'' ~ '\'')).?) ~> ((s: String) ⇒ appendSB(s.replaceAllLiterally("\"", "\\\""))) ~ (capture(noneOf("\'\\\"")) ~> ((s: String) ⇒ run(maskEsc(s))) | '"' ~ appendSB("\\\"") | UCHAR(true) | ECHAR)).* ~ str("'''") ~ push(sb.toString) ~> ASTStringLiteralLongSingleQuote
   }
 
   //[25] STRING_LITERAL_LONG_QUOTE      ::=     '"""' (('"' | '""')? ([^"\] | ECHAR | UCHAR))* '"""'
   def STRING_LITERAL_LONG_QUOTE = rule {
-    str("\"\"\"") ~ clearSB ~ (capture(('"' ~ '"' ~ !'"' | '"' ~ !('"' ~ '"')).?) ~> ((s: String) => appendSB(s.replaceAllLiterally("\"", "\\\""))) ~ (capture(noneOf("\"\\")) ~> ((s: String) => run(maskEsc(s))) | UCHAR(true) | ECHAR)).* ~ str("\"\"\"") ~ push(sb.toString) ~> ASTStringLiteralLongQuote
+    str("\"\"\"") ~ clearSB ~ (capture(('"' ~ '"' ~ !'"' | '"' ~ !('"' ~ '"')).?) ~> ((s: String) ⇒ appendSB(s.replaceAllLiterally("\"", "\\\""))) ~ (capture(noneOf("\"\\")) ~> ((s: String) ⇒ run(maskEsc(s))) | UCHAR(true) | ECHAR)).* ~ str("\"\"\"") ~ push(sb.toString) ~> ASTStringLiteralLongQuote
   }
 
   //[26] UCHAR  ::=     '\\u' HEX HEX HEX HEX | '\U' HEX HEX HEX HEX HEX HEX HEX HEX
   def UCHAR(flag: Boolean) = rule {
-    atomic(str("\\u") ~ capture(4.times(HexDigit))) ~> ((s: String) => maskQuotes(flag, s)) |
-      atomic(str("\\U") ~ capture(8.times(HexDigit))) ~> ((s: String) => maskQuotes(flag, s))
+    atomic(str("\\u") ~ capture(4.times(HexDigit))) ~> ((s: String) ⇒ maskQuotes(flag, s)) |
+      atomic(str("\\U") ~ capture(8.times(HexDigit))) ~> ((s: String) ⇒ maskQuotes(flag, s))
   }
 
   //[159s] ECHAR        ::=     '\' [tbnrf"'\]
@@ -269,13 +269,13 @@ class ChelonaParser(val input: ParserInput, val output: List[RDFReturnType] => I
 
   //[140s] PNAME_LN 	::= 	PNAME_NS PN_LOCAL
   def PNAME_LN = rule {
-    PNAME_NS ~ PN_LOCAL ~> ((ns: ASTPNameNS, local: ASTPNLocal) => (test(addPrefix(ns, local)) |
+    PNAME_NS ~ PN_LOCAL ~> ((ns: ASTPNameNS, local: ASTPNLocal) ⇒ (test(addPrefix(ns, local)) |
       run(ChelonaErrorFormatter().WarningMessage(
         "name space might be undefined",
         ((ns: @unchecked) match {
-          case ASTPNameNS(rule) => (rule: @unchecked) match {
-            case Some(ASTPNPrefix(token)) => token
-            case None                     => ""
+          case ASTPNameNS(rule) ⇒ (rule: @unchecked) match {
+            case Some(ASTPNPrefix(token)) ⇒ token
+            case None                     ⇒ ""
           }
         }), "Expected preceding @prefix definition before usage", cursor, input))) ~
       push(ns) ~ push(local)) ~> ASTPNameLN
@@ -349,9 +349,9 @@ class ChelonaParser(val input: ParserInput, val output: List[RDFReturnType] => I
 
   private def definePrefix(key: ASTPNameNS, value: ASTIriRef): Unit = {
     val pname = (key: @unchecked) match {
-      case ASTPNameNS(rule) => (rule: @unchecked) match {
-        case Some(ASTPNPrefix(token)) => token
-        case None                     => ""
+      case ASTPNameNS(rule) ⇒ (rule: @unchecked) match {
+        case Some(ASTPNPrefix(token)) ⇒ token
+        case None                     ⇒ ""
       }
     }
 
@@ -372,9 +372,9 @@ class ChelonaParser(val input: ParserInput, val output: List[RDFReturnType] => I
 
   private def addPrefix(pname_ns: ASTPNameNS, pn_local: ASTPNLocal): Boolean = {
     val ns = (pname_ns: @unchecked) match {
-      case ASTPNameNS(rule) => (rule: @unchecked) match {
-        case Some(ASTPNPrefix(token)) => token
-        case None                     => ""
+      case ASTPNameNS(rule) ⇒ (rule: @unchecked) match {
+        case Some(ASTPNPrefix(token)) ⇒ token
+        case None                     ⇒ ""
       }
     }
     prefixMap.contains(ns)

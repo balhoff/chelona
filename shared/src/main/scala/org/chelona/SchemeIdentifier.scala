@@ -20,7 +20,7 @@ class SchemeIdentifier(val input: String) {
   private final val schemeChar = """[a-zA-Z][a-zA-Z0-9+-.]*:""".r
 
   def scheme = schemeChar.findPrefixMatchOf(input) match {
-    case Some(x) => true
-    case None    => false
+    case Some(x) ⇒ true
+    case None    ⇒ false
   }
 }

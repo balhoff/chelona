@@ -16,7 +16,7 @@
 package org.chelona
 
 import org.parboiled2._
-import java.lang.{ StringBuilder => JStringBuilder }
+import java.lang.{ StringBuilder ⇒ JStringBuilder }
 
 object ChelonaErrorFormatter {
   def apply(
@@ -56,7 +56,7 @@ class ChelonaErrorFormatter(
   }
 
   def WarningMessage(s: String, t: String, e: String, cursor: Int, input: ParserInput) = {
-    import java.lang.{ StringBuilder => JStringBuilder }
+    import java.lang.{ StringBuilder ⇒ JStringBuilder }
 
     val sb = new JStringBuilder(s + " - \"" + t + "\"\n")
     val ps = Position(cursor, input)

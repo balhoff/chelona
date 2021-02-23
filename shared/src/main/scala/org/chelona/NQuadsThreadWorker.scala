@@ -35,15 +35,15 @@ final class NQuadsThreadWorker(parseQueue: mutable.Queue[NQuadParser], filename:
   import scala.annotation.tailrec
 
   @tailrec final override def run() = poll() match {
-    case Some((parser)) =>
+    case Some((parser)) ⇒
       val res = parser.nquadsDoc.run()
       res match {
-        case Success(count)         => tripleCount += count
-        case Failure(e: ParseError) => if (!trace) System.err.println("File '" + filename + "': " + parser.formatError(e, new ChelonaErrorFormatter(block = tripleCount))) else System.err.println("File '" + filename + "': " + parser.formatError(e, new ChelonaErrorFormatter(block = tripleCount, showTraces = true)))
-        case Failure(e)             => System.err.println("File '" + filename + "': Unexpected error during parsing run: " + e)
+        case Success(count)         ⇒ tripleCount += count
+        case Failure(e: ParseError) ⇒ if (!trace) System.err.println("File '" + filename + "': " + parser.formatError(e, new ChelonaErrorFormatter(block = tripleCount))) else System.err.println("File '" + filename + "': " + parser.formatError(e, new ChelonaErrorFormatter(block = tripleCount, showTraces = true)))
+        case Failure(e)             ⇒ System.err.println("File '" + filename + "': Unexpected error during parsing run: " + e)
       }
       run()
-    case None =>
+    case None ⇒
   }
 
   final def shutdown() = parseQueue.synchronized {

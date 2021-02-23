@@ -24,12 +24,12 @@ import scala.scalajs.js.annotation.{ JSExport, JSExportTopLevel }
 @JSExportTopLevel("TriGParser")
 object TriGParser extends TriGAST {
 
-  def apply(input: ParserInput, output: List[RDFReturnType] => Int, validate: Boolean = false, basePath: String = "http://chelona.org", label: String = "") = {
+  def apply(input: ParserInput, output: List[RDFReturnType] ⇒ Int, validate: Boolean = false, basePath: String = "http://chelona.org", label: String = "") = {
     new TriGParser(input, output, validate, basePath, label)
   }
 }
 
-class TriGParser(input: ParserInput, output: List[RDFReturnType] => Int, validate: Boolean = false, basePath: String = "http://chelona.org", label: String = "") extends ChelonaParser(input: ParserInput, output, validate, basePath, label) {
+class TriGParser(input: ParserInput, output: List[RDFReturnType] ⇒ Int, validate: Boolean = false, basePath: String = "http://chelona.org", label: String = "") extends ChelonaParser(input: ParserInput, output, validate, basePath, label) {
 
   import TriGAST._
 
@@ -37,16 +37,16 @@ class TriGParser(input: ParserInput, output: List[RDFReturnType] => Int, validat
 
   //[1] trigDoc 	::= 	statement*
   def trigDoc = rule {
-    (statement ~> ((ast: TurtleType) =>
+    (statement ~> ((ast: TurtleType) ⇒
       if (!__inErrorAnalysis) {
         if (!validate) {
           renderStatement(ast)
         } else
           ast match {
-            case ASTStatement(ASTComment(s)) => 0
-            case _                           => 1
+            case ASTStatement(ASTComment(s)) ⇒ 0
+            case _                           ⇒ 1
           }
-      } else { 0 })).* ~ EOI ~> ((v: Seq[Int]) => {
+      } else { 0 })).* ~ EOI ~> ((v: Seq[Int]) ⇒ {
 
       v.sum
     })

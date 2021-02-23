@@ -68,7 +68,7 @@ object TriGMain extends App {
   // fetch base definition from command line parser
   val base = cmdLineArgs.get.base
   // if uid had been requested from the command line, build unique random label
-  val label = if (cmdLineArgs.get.uid) java.util.UUID.randomUUID.toString.filter((c: Char) => c != '-').mkString("") else ""
+  val label = if (cmdLineArgs.get.uid) java.util.UUID.randomUUID.toString.filter((c: Char) ⇒ c != '-').mkString("") else ""
 
   // prepare input data for TriG parser
   lazy val input: ParserInput = inputfile.get.mkString
@@ -104,7 +104,7 @@ object TriGMain extends App {
 
   // depending on outcome of parsing the TriG data, write some information to standard error
   res match {
-    case Success(tripleCount) =>
+    case Success(tripleCount) ⇒
       val me: Double = System.currentTimeMillis - ms
       if (verbose) {
         if (!validate) {
@@ -113,7 +113,7 @@ object TriGMain extends App {
           System.err.println("Input file '" + file.getCanonicalPath + "' composed of " + tripleCount + " statements successfully validated in " + (me / 1000.0) + "sec (statements per second = " + ((tripleCount * 1000) / me + 0.5).toInt + ")")
         }
       }
-    case Failure(e: ParseError) => if (!cmdLineArgs.get.trace) System.err.println("File '" + file.getCanonicalPath + "': " + parser.formatError(e)) else System.err.println("File '" + file.getCanonicalPath + "': " + parser.formatError(e, new ErrorFormatter(showTraces = true)))
-    case Failure(e)             => System.err.println("File '" + file.getCanonicalPath + "': Unexpected error during parsing run: " + e)
+    case Failure(e: ParseError) ⇒ if (!cmdLineArgs.get.trace) System.err.println("File '" + file.getCanonicalPath + "': " + parser.formatError(e)) else System.err.println("File '" + file.getCanonicalPath + "': " + parser.formatError(e, new ErrorFormatter(showTraces = true)))
+    case Failure(e)             ⇒ System.err.println("File '" + file.getCanonicalPath + "': Unexpected error during parsing run: " + e)
   }
 }
