@@ -23,12 +23,12 @@ import scala.scalajs.js.annotation.{ JSExport, JSExportTopLevel }
 @JSExportTopLevel("NTriplesParser")
 object NTriplesParser extends NTripleAST {
 
-  def apply(input: ParserInput, output: (Term, Term, Term, Term) ⇒ Int, validate: Boolean = false, basePath: String = "http://chelona.org", label: String = "") = {
+  def apply(input: ParserInput, output: (Term, Term, Term, Term) => Int, validate: Boolean = false, basePath: String = "http://chelona.org", label: String = "") = {
     new NTriplesParser(input, output, validate, basePath, label)
   }
 }
 
-class NTriplesParser(val input: ParserInput, val output: (Term, Term, Term, Term) ⇒ Int, validate: Boolean = false, val basePath: String = "http://chelona.org", val label: String = "") extends Parser with StringBuilding {
+class NTriplesParser(val input: ParserInput, val output: (Term, Term, Term, Term) => Int, validate: Boolean = false, val basePath: String = "http://chelona.org", val label: String = "") extends Parser with StringBuilding {
 
   import org.chelona.CharPredicates._
   import org.parboiled2.CharPredicate.{ Alpha, AlphaNum, HexDigit }
@@ -36,7 +36,7 @@ class NTriplesParser(val input: ParserInput, val output: (Term, Term, Term, Term
 
   import NTripleAST._
 
-  private def hexStringToCharString(s: String) = s.grouped(4).map(cc ⇒ (hexValue(cc(0)) << 12 | hexValue(cc(1)) << 8 | hexValue(cc(2)) << 4 | hexValue(cc(3))).toChar).filter(_ != '\u0000').mkString("")
+  private def hexStringToCharString(s: String) = s.grouped(4).map(cc => (hexValue(cc(0)) << 12 | hexValue(cc(1)) << 8 | hexValue(cc(2)) << 4 | hexValue(cc(3))).toChar).filter(_ != '\u0000').mkString("")
 
   val renderStatement = EvalNTriples(output, basePath, label).renderStatement _
 
@@ -51,18 +51,18 @@ class NTriplesParser(val input: ParserInput, val output: (Term, Term, Term, Term
 
   //[1]	ntriplesDoc	::=	triple? (EOL triple)* EOL?
   def ntriplesDoc: Rule1[Int] = rule {
-    (triple ~> ((ast: NTripleAST) ⇒
+    (triple ~> ((ast: NTripleAST) =>
       if (!__inErrorAnalysis) {
         if (!validate) {
           renderStatement(ast)
         } else
           ast match {
-            case ASTComment(s) ⇒ 0
-            case _             ⇒ 1
+            case ASTComment(s) => 0
+            case _             => 1
           }
       } else {
         0
-      })).*(EOL) ~ EOL.? ~ EOI ~> ((v: Seq[Int]) ⇒ {
+      })).*(EOL) ~ EOL.? ~ EOI ~> ((v: Seq[Int]) => {
       v.sum
     })
   }
@@ -76,9 +76,9 @@ class NTriplesParser(val input: ParserInput, val output: (Term, Term, Term, Term
   def subject = rule {
     run {
       cursorChar match {
-        case '<' ⇒ IRIREF
-        case '_' ⇒ BLANK_NODE_LABEL
-        case _   ⇒ MISMATCH
+        case '<' => IRIREF
+        case '_' => BLANK_NODE_LABEL
+        case _   => MISMATCH
       }
     } ~> ASTSubject
   }
@@ -92,10 +92,10 @@ class NTriplesParser(val input: ParserInput, val output: (Term, Term, Term, Term
   def `object` = rule {
     run {
       cursorChar match {
-        case '<' ⇒ IRIREF
-        case '"' ⇒ literal
-        case '_' ⇒ BLANK_NODE_LABEL
-        case _   ⇒ MISMATCH
+        case '<' => IRIREF
+        case '"' => literal
+        case '_' => BLANK_NODE_LABEL
+        case _   => MISMATCH
       }
     } ~> ASTObject
   }
@@ -128,7 +128,7 @@ class NTriplesParser(val input: ParserInput, val output: (Term, Term, Term, Term
         "\\u007B" | "\\u007b" | "\\U0000007B" | "\\U0000007b" |
         "\\u007C" | "\\u007c" | "\\U0000007C" | "\\U0000007c" |
         "\\u007D" | "\\u007d" | "\\U0000007D" | "\\U0000007d") ~ UCHAR(false)).*) ~ push(sb.toString) ~ '>' ~>
-      ((iri: String) ⇒ (test(isAbsoluteIRIRef(iri)) | run(ChelonaErrorFormatter().WarningMessage(
+      ((iri: String) => (test(isAbsoluteIRIRef(iri)) | run(ChelonaErrorFormatter().WarningMessage(
         "relative IRI not allowed", iri, "Use absolute IRI instead", cursor, input))) ~ push(iri)) ~> ASTIriRef ~ ws
   }
 

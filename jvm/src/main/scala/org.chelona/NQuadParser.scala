@@ -24,11 +24,11 @@ import scala.util.{ Failure, Success }
 
 object NQuadParser {
 
-  def apply(input: ParserInput, output: (Term, Term, Term, Term) ⇒ Int, validate: Boolean = false, basePath: String = "http://chelona.org", label: String = "") = {
+  def apply(input: ParserInput, output: (Term, Term, Term, Term) => Int, validate: Boolean = false, basePath: String = "http://chelona.org", label: String = "") = {
     new NQuadParser(input, output, validate, basePath, label)
   }
 
-  def parseAll(filename: String, inputBuffer: BufferedSource, output: (Term, Term, Term, Term) ⇒ Int, validate: Boolean, base: String, label: String, verbose: Boolean, trace: Boolean, n: Int): Unit = {
+  def parseAll(filename: String, inputBuffer: BufferedSource, output: (Term, Term, Term, Term) => Int, validate: Boolean, base: String, label: String, verbose: Boolean, trace: Boolean, n: Int): Unit = {
 
     val ms: Double = System.currentTimeMillis
 
@@ -58,9 +58,9 @@ object NQuadParser {
       val parser = parseQueue.dequeue()
       val res = parser.nquadsDoc.run()
       res match {
-        case Success(count)         ⇒ tripleCount += count
-        case Failure(e: ParseError) ⇒ if (!trace) System.err.println("File '" + filename + "': " + parser.formatError(e, new ChelonaErrorFormatter(block = tripleCount))) else System.err.println("File '" + filename + "': " + parser.formatError(e, new ChelonaErrorFormatter(block = tripleCount, showTraces = true)))
-        case Failure(e)             ⇒ System.err.println("File '" + filename + "': Unexpected error during parsing run: " + e)
+        case Success(count)         => tripleCount += count
+        case Failure(e: ParseError) => if (!trace) System.err.println("File '" + filename + "': " + parser.formatError(e, new ChelonaErrorFormatter(block = tripleCount))) else System.err.println("File '" + filename + "': " + parser.formatError(e, new ChelonaErrorFormatter(block = tripleCount, showTraces = true)))
+        case Failure(e)             => System.err.println("File '" + filename + "': Unexpected error during parsing run: " + e)
       }
     }
 
@@ -80,7 +80,7 @@ object NQuadParser {
   }
 }
 
-class NQuadParser(input: ParserInput, output: (Term, Term, Term, Term) ⇒ Int, validate: Boolean = false, basePath: String = "http://chelona.org", label: String = "") extends NTriplesParser(input: ParserInput, output, validate, basePath, label) {
+class NQuadParser(input: ParserInput, output: (Term, Term, Term, Term) => Int, validate: Boolean = false, basePath: String = "http://chelona.org", label: String = "") extends NTriplesParser(input: ParserInput, output, validate, basePath, label) {
 
   import NQuadAST._
 
@@ -88,14 +88,14 @@ class NQuadParser(input: ParserInput, output: (Term, Term, Term, Term) ⇒ Int, 
 
   //[1]	nquadsDoc	::=	statement? (EOL statement)* EOL?
   def nquadsDoc = rule {
-    (statement ~> ((ast: NTripleType) ⇒
+    (statement ~> ((ast: NTripleType) =>
       if (!__inErrorAnalysis) {
         if (!validate) {
           asynchronous((renderStatement, ast)); 1
         } else
           ast match {
-            case ASTComment(s) ⇒ 0
-            case _             ⇒ 1
+            case ASTComment(s) => 0
+            case _             => 1
           }
       } else {
         if (!validate) {
@@ -110,7 +110,7 @@ class NQuadParser(input: ParserInput, output: (Term, Term, Term, Term) ⇒ Int, 
           }
         }
         0
-      })).*(EOL) ~ EOL.? ~ EOI ~> ((v: Seq[Int]) ⇒ {
+      })).*(EOL) ~ EOL.? ~ EOI ~> ((v: Seq[Int]) => {
       if (!validate) {
         worker.shutdown()
         worker.join()

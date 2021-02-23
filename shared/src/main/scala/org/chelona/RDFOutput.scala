@@ -22,7 +22,7 @@ trait RDFTurtleOutput {
 
   def turtleWriter(bo: Writer)(triple: List[RDFReturnType]): Int = {
     triple.map {
-      case RDFTriple(s, p, o) ⇒ bo.write(s.value + " " + p.value + " " + o.value + " .\n")
+      case RDFTriple(s, p, o) => bo.write(s.value + " " + p.value + " " + o.value + " .\n")
     }.length
   }
 }
@@ -32,7 +32,7 @@ object RDFTurtleOutput extends RDFTurtleOutput
 trait RDFTriGOutput {
   def trigWriter(bo: Writer)(tuple: List[RDFReturnType]): Int = {
     tuple.map {
-      case RDFQuad(s, p, o, g) ⇒ {
+      case RDFQuad(s, p, o, g) => {
         bo.write(s.value + " " + p.value + " " + o.value + (if (g.value.length > 0) " " + g.value + " .\n" else " .\n"))
       }
     }.length
@@ -70,7 +70,7 @@ trait JSONLDFlatOutput {
   def jsonLDFlatWriterTriple(bo: Writer)(triple: List[RDFReturnType]): Int = {
     val writer = jsonLDFlatWriter(bo)_
     triple.map {
-      case RDFTriple(s, p, o) ⇒ {
+      case RDFTriple(s, p, o) => {
         writer(s, p, o, defaultGraph)
       }
     }.length
@@ -79,7 +79,7 @@ trait JSONLDFlatOutput {
   def jsonLDFlatWriterQuad(bo: Writer)(quad: List[RDFReturnType]): Int = {
     val writer = jsonLDFlatWriter(bo)_
     quad.map {
-      case RDFQuad(s, p, o, g) ⇒ {
+      case RDFQuad(s, p, o, g) => {
         writer(s, p, o, g)
       }
     }.length

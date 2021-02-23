@@ -71,12 +71,12 @@ class NTriplesEARLSpec extends AnyFlatSpec with RDFNTOutput {
     val parser = NTriplesParser(input, writer, false, "http://www.w3.org/2013/NTriplesTests", "")
 
     val res = parser.ntriplesDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-string-02.nt': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-string-02.nt': Unexpected error during parsing run: " + e)
         false
     }
@@ -96,12 +96,12 @@ class NTriplesEARLSpec extends AnyFlatSpec with RDFNTOutput {
     val parser = NTriplesParser(input, writer, false, "http://www.w3.org/2013/NTriplesTests", "")
 
     val res = parser.ntriplesDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-string-04.nt': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-string-04.nt': Unexpected error during parsing run: " + e)
         false
     }
@@ -141,12 +141,12 @@ class NTriplesEARLSpec extends AnyFlatSpec with RDFNTOutput {
     val parser = NTriplesParser(input, writer, false, "http://www.w3.org/2013/NTriplesTests", "")
 
     val res = parser.ntriplesDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-num-03.nt': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-num-03.nt': Unexpected error during parsing run: " + e)
         false
     }
@@ -166,12 +166,12 @@ class NTriplesEARLSpec extends AnyFlatSpec with RDFNTOutput {
     val parser = NTriplesParser(input, writer, false, "http://www.w3.org/2013/NTriplesTests", "")
 
     val res = parser.ntriplesDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-base-01.nt': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-base-01.nt': Unexpected error during parsing run: " + e)
         false
     }
@@ -248,12 +248,12 @@ class NTriplesEARLSpec extends AnyFlatSpec with RDFNTOutput {
     val parser = NTriplesParser(input, writer, false, "http://www.w3.org/2013/NTriplesTests", "")
 
     val res = parser.ntriplesDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-esc-01.nt': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-esc-01.nt': Unexpected error during parsing run: " + e)
         false
     }
@@ -273,12 +273,12 @@ class NTriplesEARLSpec extends AnyFlatSpec with RDFNTOutput {
     val parser = NTriplesParser(input, writer, false, "http://www.w3.org/2013/NTriplesTests", "")
 
     val res = parser.ntriplesDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-uri-03.nt': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-uri-03.nt': Unexpected error during parsing run: " + e)
         false
     }
@@ -338,12 +338,12 @@ class NTriplesEARLSpec extends AnyFlatSpec with RDFNTOutput {
     val parser = NTriplesParser(input, writer, false, "http://www.w3.org/2013/NTriplesTests", "")
 
     val res = parser.ntriplesDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-lang-01.nt': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-lang-01.nt': Unexpected error during parsing run: " + e)
         false
     }
@@ -403,12 +403,12 @@ class NTriplesEARLSpec extends AnyFlatSpec with RDFNTOutput {
     val parser = NTriplesParser(input, writer, false, "http://www.w3.org/2013/NTriplesTests", "")
 
     val res = parser.ntriplesDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-esc-02.nt': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-esc-02.nt': Unexpected error during parsing run: " + e)
         false
     }
@@ -508,12 +508,12 @@ class NTriplesEARLSpec extends AnyFlatSpec with RDFNTOutput {
     val parser = NTriplesParser(input, writer, false, "http://www.w3.org/2013/NTriplesTests", "")
 
     val res = parser.ntriplesDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-prefix-01.nt': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-prefix-01.nt': Unexpected error during parsing run: " + e)
         false
     }
@@ -533,12 +533,12 @@ class NTriplesEARLSpec extends AnyFlatSpec with RDFNTOutput {
     val parser = NTriplesParser(input, writer, false, "http://www.w3.org/2013/NTriplesTests", "")
 
     val res = parser.ntriplesDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-uri-01.nt': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-uri-01.nt': Unexpected error during parsing run: " + e)
         false
     }
@@ -598,12 +598,12 @@ class NTriplesEARLSpec extends AnyFlatSpec with RDFNTOutput {
     val parser = NTriplesParser(input, writer, false, "http://www.w3.org/2013/NTriplesTests", "")
 
     val res = parser.ntriplesDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-struct-02.nt': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-struct-02.nt': Unexpected error during parsing run: " + e)
         false
     }
@@ -623,12 +623,12 @@ class NTriplesEARLSpec extends AnyFlatSpec with RDFNTOutput {
     val parser = NTriplesParser(input, writer, false, "http://www.w3.org/2013/NTriplesTests", "")
 
     val res = parser.ntriplesDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-string-03.nt': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-string-03.nt': Unexpected error during parsing run: " + e)
         false
     }
@@ -668,12 +668,12 @@ class NTriplesEARLSpec extends AnyFlatSpec with RDFNTOutput {
     val parser = NTriplesParser(input, writer, false, "http://www.w3.org/2013/NTriplesTests", "")
 
     val res = parser.ntriplesDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-num-01.nt': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-num-01.nt': Unexpected error during parsing run: " + e)
         false
     }
@@ -693,12 +693,12 @@ class NTriplesEARLSpec extends AnyFlatSpec with RDFNTOutput {
     val parser = NTriplesParser(input, writer, false, "http://www.w3.org/2013/NTriplesTests", "")
 
     val res = parser.ntriplesDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-num-02.nt': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-num-02.nt': Unexpected error during parsing run: " + e)
         false
     }
@@ -778,12 +778,12 @@ class NTriplesEARLSpec extends AnyFlatSpec with RDFNTOutput {
     val parser = NTriplesParser(input, writer, false, "http://www.w3.org/2013/NTriplesTests", "")
 
     val res = parser.ntriplesDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-uri-07.nt': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-uri-07.nt': Unexpected error during parsing run: " + e)
         false
     }
@@ -823,12 +823,12 @@ class NTriplesEARLSpec extends AnyFlatSpec with RDFNTOutput {
     val parser = NTriplesParser(input, writer, false, "http://www.w3.org/2013/NTriplesTests", "")
 
     val res = parser.ntriplesDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-uri-04.nt': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-uri-04.nt': Unexpected error during parsing run: " + e)
         false
     }
@@ -908,12 +908,12 @@ class NTriplesEARLSpec extends AnyFlatSpec with RDFNTOutput {
     val parser = NTriplesParser(input, writer, false, "http://www.w3.org/2013/NTriplesTests", "")
 
     val res = parser.ntriplesDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-string-01.nt': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-string-01.nt': Unexpected error during parsing run: " + e)
         false
     }
@@ -953,12 +953,12 @@ class NTriplesEARLSpec extends AnyFlatSpec with RDFNTOutput {
     val parser = NTriplesParser(input, writer, false, "http://www.w3.org/2013/NTriplesTests", "")
 
     val res = parser.ntriplesDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-uri-05.nt': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-uri-05.nt': Unexpected error during parsing run: " + e)
         false
     }
@@ -1018,12 +1018,12 @@ class NTriplesEARLSpec extends AnyFlatSpec with RDFNTOutput {
     val parser = NTriplesParser(input, writer, false, "http://www.w3.org/2013/NTriplesTests", "")
 
     val res = parser.ntriplesDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-esc-03.nt': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-esc-03.nt': Unexpected error during parsing run: " + e)
         false
     }
@@ -1103,12 +1103,12 @@ class NTriplesEARLSpec extends AnyFlatSpec with RDFNTOutput {
     val parser = NTriplesParser(input, writer, false, "http://www.w3.org/2013/NTriplesTests", "")
 
     val res = parser.ntriplesDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-uri-02.nt': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-uri-02.nt': Unexpected error during parsing run: " + e)
         false
     }
@@ -1168,12 +1168,12 @@ class NTriplesEARLSpec extends AnyFlatSpec with RDFNTOutput {
     val parser = NTriplesParser(input, writer, false, "http://www.w3.org/2013/NTriplesTests", "")
 
     val res = parser.ntriplesDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-string-07.nt': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-string-07.nt': Unexpected error during parsing run: " + e)
         false
     }
@@ -1213,12 +1213,12 @@ class NTriplesEARLSpec extends AnyFlatSpec with RDFNTOutput {
     val parser = NTriplesParser(input, writer, false, "http://www.w3.org/2013/NTriplesTests", "")
 
     val res = parser.ntriplesDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-struct-01.nt': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-struct-01.nt': Unexpected error during parsing run: " + e)
         false
     }
@@ -1278,12 +1278,12 @@ class NTriplesEARLSpec extends AnyFlatSpec with RDFNTOutput {
     val parser = NTriplesParser(input, writer, false, "http://www.w3.org/2013/NTriplesTests", "")
 
     val res = parser.ntriplesDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-uri-08.nt': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-uri-08.nt': Unexpected error during parsing run: " + e)
         false
     }
@@ -1323,12 +1323,12 @@ class NTriplesEARLSpec extends AnyFlatSpec with RDFNTOutput {
     val parser = NTriplesParser(input, writer, false, "http://www.w3.org/2013/NTriplesTests", "")
 
     val res = parser.ntriplesDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-string-06.nt': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-string-06.nt': Unexpected error during parsing run: " + e)
         false
     }
@@ -1408,12 +1408,12 @@ class NTriplesEARLSpec extends AnyFlatSpec with RDFNTOutput {
     val parser = NTriplesParser(input, writer, false, "http://www.w3.org/2013/NTriplesTests", "")
 
     val res = parser.ntriplesDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-string-05.nt': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-string-05.nt': Unexpected error during parsing run: " + e)
         false
     }
@@ -1493,12 +1493,12 @@ class NTriplesEARLSpec extends AnyFlatSpec with RDFNTOutput {
     val parser = NTriplesParser(input, writer, false, "http://www.w3.org/2013/NTriplesTests", "")
 
     val res = parser.ntriplesDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-uri-09.nt': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-uri-09.nt': Unexpected error during parsing run: " + e)
         false
     }
@@ -1518,12 +1518,12 @@ class NTriplesEARLSpec extends AnyFlatSpec with RDFNTOutput {
     val parser = NTriplesParser(input, writer, false, "http://www.w3.org/2013/NTriplesTests", "")
 
     val res = parser.ntriplesDoc.run() match {
-      case scala.util.Success(tripleCount) ⇒
+      case scala.util.Success(tripleCount) =>
         true
-      case Failure(e: ParseError) ⇒
+      case Failure(e: ParseError) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-uri-06.nt': " + parser.formatError(e))
         false
-      case Failure(e) ⇒
+      case Failure(e) =>
         System.err.println("File './NTriplesTests/nt-syntax-bad-uri-06.nt': Unexpected error during parsing run: " + e)
         false
     }
